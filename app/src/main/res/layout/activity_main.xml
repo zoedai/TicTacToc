@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="12"
-        android:background="#3E2723">
+        android:background="#1a237e">
 
         <TableRow
             android:layout_width="match_parent"
@@ -37,7 +37,8 @@
                 android:id="@+id/imageButton3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:backgroundTint="#ffffff" />
         </TableRow>
 
         <TableRow
@@ -96,17 +97,28 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="4"
-        android:background="#33691E">
+        android:background="#e3f2fd">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/resetBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginEnd="19dp"
-            android:layout_marginTop="17dp"
-            android:text="@string/reset" />
+            android:text="@string/reset"
+            android:onClick="resetGame"
+            android:layout_below="@+id/status"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/status"
+            android:layout_marginStart="89dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#E8F5E9"
+            android:textSize="40sp" />
+
     </RelativeLayout>
 
 </LinearLayout>
