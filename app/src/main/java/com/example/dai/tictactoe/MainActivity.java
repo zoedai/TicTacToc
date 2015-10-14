@@ -1,4 +1,4 @@
-package com.example.dai.tictactoc;
+package com.example.dai.tictactoe;
 
 
 import android.os.SystemClock;
@@ -29,11 +29,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(com.example.dai.tictactoc.R.layout.activity_main);
 
-        status = (TextView) findViewById(R.id.status);
-        gameTable = (TableLayout) findViewById(R.id.gameTable);
-        resetBtn = (Button) findViewById(R.id.resetBtn);
+        status = (TextView) findViewById(com.example.dai.tictactoc.R.id.status);
+        gameTable = (TableLayout) findViewById(com.example.dai.tictactoc.R.id.gameTable);
+        resetBtn = (Button) findViewById(com.example.dai.tictactoc.R.id.resetBtn);
 
         View.OnClickListener listener = new OnClickListener() {
             @Override
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
                 ++totalSteps;
                 game[i][j] = player;
-                buttons[i][j].setImageResource(player == 1 ? R.drawable.x : R.drawable.o);
+                buttons[i][j].setImageResource(player == 1 ? com.example.dai.tictactoc.R.drawable.x : com.example.dai.tictactoc.R.drawable.o);
                 if (totalSteps >= 5) {
                     checkWinner(player, i, j);
                 }
@@ -70,13 +70,13 @@ public class MainActivity extends AppCompatActivity {
             TableRow row = (TableRow) gameTable.getChildAt(i);
             for (int j = 0; j < 3; j++) {
                 buttons[i][j] = (ImageButton) row.getChildAt(j);
-                buttons[i][j].setImageResource(R.drawable.empty);
+                buttons[i][j].setImageResource(com.example.dai.tictactoc.R.drawable.empty);
                 buttons[i][j].setScaleType(ImageView.ScaleType.FIT_XY);
                 buttons[i][j].setAdjustViewBounds(true);
                 buttons[i][j].setOnClickListener(listener);
             }
         }
-        
+
     }
 
 
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
         gameOngoing = true;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                buttons[i][j].setImageResource(R.drawable.empty);
+                buttons[i][j].setImageResource(com.example.dai.tictactoc.R.drawable.empty);
                 game[i][j] = 0;
             }
         }

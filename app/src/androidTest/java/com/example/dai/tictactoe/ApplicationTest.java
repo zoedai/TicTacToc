@@ -1,4 +1,4 @@
-package com.example.dai.tictactoc;
+package com.example.dai.tictactoe;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
