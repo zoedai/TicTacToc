@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="12"
-        android:background="#1a237e">
+        android:background="#ed5a25">
 
         <TableRow
             android:layout_width="match_parent"
@@ -97,7 +97,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="4"
-        android:background="#e3f2fd">
+        android:background="#c35838">
 
         <Button
             android:id="@+id/resetBtn"
@@ -116,8 +116,8 @@
             android:layout_marginStart="89dp"
             android:layout_centerVertical="true"
             android:layout_alignParentStart="true"
-            android:textColor="#E8F5E9"
-            android:textSize="40sp" />
+            android:textSize="40sp"
+            android:textColor="#000000" />
 
     </RelativeLayout>
 
